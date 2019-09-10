@@ -42,12 +42,6 @@ body{
   align-items: center; /*centers items on the cross-axis (y by default)*/
 }
 
-div {
-  display: flex;
-  font-size: 30px;
-
-}
-
-div *{
-  margin: 0px 20px 0px 20px;
+.buttons {
+  display: flex
 }

@@ -9,7 +9,7 @@ function IncrementCounter(props) {
     }
 
     return (
-        <div className="increment-counter" >{props.ctr}
+        <div className="buttons" >{props.ctr}
             <button onClick={() => onIncrementButtonClicked()}>+</button>
         </div>
     )

@@ -5,7 +5,7 @@ import '../App.css'
 function ViewCounter(props) {
 
     return (
-        <div className="decrement-counter" >
+        <div className="buttons" >
             {props.ctr}
         </div>
     )

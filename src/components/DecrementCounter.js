@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import '../App.css'
+
 
 function DecrementCounter(props) {
 
@@ -9,7 +9,7 @@ function DecrementCounter(props) {
     }
 
     return (
-        <div className="decrement-counter" >{props.ctr}
+        <div className="buttons" >{props.ctr}
             <button onClick={() => onDecrementButtonClicked()}>-</button>
         </div>
     )
