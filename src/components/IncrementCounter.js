@@ -1,25 +1,38 @@
-import REeact, { userState } from 'react'
-import './App.css'
+import React from 'react'
 import { connect } from 'react-redux'
 
 
 function IncrementCounter(props) {
-    const [counter, setCounter] = useState(0)
 
-    const onIncrementButtonClicked = (props) => {
+    const onIncrementButtonClicked = () => {
         props.onIncrement()
     }
 
     return (
-        <div>
-            <button onClick={() => nIncrementButtonClicked()}>Increment</button>
+        <div className="increment-counter" >{props.ctr}
+            <button onClick={() => onIncrementButtonClicked()}>Increment</button>
         </div>
     )
+}
+
+// Gets the props to display
+const mapStateToProps = (state) => {
+    return {
+        ctr: state.counter
+    }
+}
+
+// Dispatcher sends to reducer
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onIncrement: () => dispatch({
+            type: "INCREMENT_COUNTER"
+        })
+    }
 }
 
 
 
 
 
-
-export default IncrementCounter;
+export default connect(mapStateToProps, mapDispatchToProps)(IncrementCounter);
