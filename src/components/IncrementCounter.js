@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
+import '../App.css'
 
 function IncrementCounter(props) {
 
@@ -10,17 +10,17 @@ function IncrementCounter(props) {
 
     return (
         <div className="increment-counter" >{props.ctr}
-            <button onClick={() => onIncrementButtonClicked()}>Increment</button>
+            <button onClick={() => onIncrementButtonClicked()}>+</button>
         </div>
     )
 }
 
-// Gets the props to display
-const mapStateToProps = (state) => {
-    return {
-        ctr: state.counter
-    }
-}
+// // Gets the props to display
+// const mapStateToProps = (state) => {
+//     return {
+//         ctr: state.counter
+//     }
+// }
 
 // Dispatcher sends to reducer
 const mapDispatchToProps = (dispatch) => {
@@ -35,4 +35,4 @@ const mapDispatchToProps = (dispatch) => {
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(IncrementCounter);
+export default connect(null, mapDispatchToProps)(IncrementCounter);
