@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Button } from 'reactstrap'
 
 
 function Subtract10(props) {
@@ -10,7 +11,7 @@ function Subtract10(props) {
 
     return (
         <div className="buttons" >{props.ctr}
-            <button onClick={() => subtract10ButtonClicked()}>SUBTRACT 10</button>
+            <Button color="primary" onClick={() => subtract10ButtonClicked()}>Subtract 10</Button>{' '}
         </div>
     )
 }

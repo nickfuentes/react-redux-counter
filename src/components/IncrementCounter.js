@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import '../App.css'
+import { Button } from 'reactstrap';
 
 function IncrementCounter(props) {
 
@@ -10,7 +11,7 @@ function IncrementCounter(props) {
 
     return (
         <div className="buttons" >{props.ctr}
-            <button onClick={() => onIncrementButtonClicked()}>+</button>
+            <Button color="primary" onClick={() => onIncrementButtonClicked()}>+</Button>{' '}
         </div>
     )
 }
